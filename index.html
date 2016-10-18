@@ -54,13 +54,38 @@
 	 height:40px;
 	 width:30px;
 	 margin-bottom:-5px;
- }
-	#mainbody{
+     }
+ #mainbody{
 		position:relative;
 		text-align: center;
-
 	}
-	#list{
+  #item1{
+ 	 overflow:hidden;
+ 	 background-image:url(http://i1.piimg.com/4851/11f81c34f11baa9c.jpg);
+ 	 background-size:100% 110%;
+  }
+  #item2{
+ 	 overflow:hidden;
+ 	 background-image:url(http://i1.piimg.com/4851/b2383364838a35f8.jpg);
+ 	 background-size:100% 100%;
+ 	 color:whitesmoke;
+  }
+  #item3{
+ 	 overflow:hidden;
+ 	 background-image:url(http://i1.piimg.com/4851/53f6a0322fa501d1.jpg);
+ 	 background-size:100% 100%;
+  }
+  #item4{
+ 	 overflow:hidden;
+ 	 background-image:url(http://i1.piimg.com/4851/031aea64e19615bf.jpg);
+ 	 background-size:100% 100%;
+  }
+  #item5{
+ 	 overflow:hidden;
+ 	 background-image:url(http://i1.piimg.com/4851/3cc46a1ea7f0588b.jpg);
+ 	 background-size:100% 100%;
+  }
+ 	#list{
 	margin:0 0 0 auto ;
     padding-top:80px;
     position:fixed;
@@ -114,17 +139,7 @@
 	 padding-top:80px;
 	 z-index:-999;
  }
- #item1{
-	 overflow:hidden;
-	 background-image:url(http://i1.piimg.com/567571/be8669b04745826d.jpg);
-	 background-size:100% 170%;
- }
- #item2{
-     overflow:hidden;
-	 background-image:url(http://i1.piimg.com/4851/4b3bb66675b32c73.jpg);
-	 background-size:100% 170%;
-	 color:whitesmoke;
- }
+
 #aboutText{
 	width:650px;
 	height:600px;
@@ -217,11 +232,7 @@
 	 .C{
 		 margin-bottom:-6px;
 	 }
-	 #item3{
-	overflow:hidden;
-	 background-image:url(http://i1.piimg.com/4851/84add333b7205a9b.jpg);
-	 background-size:200% 170%;
-	 }
+
 	 #skillsText{
 		 width:700px;
 		 height:500px;
@@ -362,16 +373,7 @@
 	 background:#64a;
 	 border-radius:0 10px 10px 0;
  }
- #item4{
-	overflow:hidden;
-	 background-image:url(http://i1.piimg.com/4851/61f5cdc394af62d6.jpg);
-	 background-size:100% 100%;
- }
- #item5{
-	overflow:hidden;
-	 background-image:url(http://i1.piimg.com/4851/418a9719a6395bc7.jpg);
-	 background-size:100% 100%;
- }
+
  #projectsText{
 	 padding-top:220px;
 	 background-color:transparent;
@@ -438,7 +440,7 @@
 					currentLink.removeClass("highlight");
 					menu.find("[href=" + currentId + "]").addClass("highlight");
 				}
-				if(top>1000 && top<2000){
+				if(top>800 && top<2000){
 					$(".v").addClass("L");
 				}else{$(".v").removeClass("L");}
 			});
