@@ -1,0 +1,773 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>五子棋</title>
+    <style type="text/css">
+body {
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+#qipan {
+	width:750px;
+	height:750px;
+	background-color:transparent;
+	position:relative;
+	overflow:hidden;
+	padding:1px;
+	margin:1px;
+}
+.qizi {
+	width:44px;
+	height:44px;
+	border:solid 1px transparent;
+	display:inline-block;
+	float:left;
+	margin:1px;
+	padding:0;
+	border-radius:50%;
+}
+.qizi:hover {
+	border:solid 1px red;
+	cursor:pointer;
+}
+.b {
+	background-image:url(http://p1.bpimg.com/4851/289b663435faa698.png);
+	background-repeat:no-repeat;
+	background-size:46px;
+	background-position:center;
+}
+.w {
+	background-image:url(http://p1.bpimg.com/4851/3427aff97fe3fb34.png);
+	background-repeat:no-repeat;
+	background-size:46px;
+	background-position:center;
+}
+#qipan img {
+	z-index:-999;
+	position: absolute;
+	width:722px;
+	height:725px;
+	top:0;
+	left:0;
+}
+#who {
+	display:inline-block;
+	width:80px;
+	height:200px;
+	overflow:hidden;
+	font-size:50px;
+	font-family: 华文行楷;
+	float:left;
+	position:absolute;
+	left:800px;
+	top:100px;
+}
+#clear {
+	position:absolute;
+	top:600px;
+	left:780px;
+	height:50px;
+	width:80px;
+	font-size:28px;
+	font-family: Cambria
+}
+</style>
+    </head>
+
+    <body>
+<div id="qipan"> <img src="http://i1.piimg.com/4851/3da0e97e6fab9f73.jpg">
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+    </div>
+<div>
+      <input type="button" value="clear" id="clear">
+    </div>
+<div id="who">黑方走</div>
+<script type="text/javascript">
+    var i=0;
+	var ava=0;
+    var qizi=document.getElementsByClassName("qizi");
+    var who=document.getElementById("who");
+    var clear=document.getElementById("clear");
+    //接下来这个for是为了给每个棋子加ID
+    for(var p=0;p<qizi.length;p++){
+        qizi[p].id="a"+(Math.floor(p/25)-5)+"b"+((p%25)-5);
+		qizi[p].sta2=qizi[p].id.split("a")[1];
+		qizi[p].sta=qizi[p].sta2.split("b")[0];
+		qizi[p].stb=qizi[p].id.split("b")[1];
+    }
+    //以上这个for是为了给每个棋子加ID
+	    for(var k=0;k<qizi.length;k++){
+		qizi[k].qiziColor="none";
+		if(qizi[k].sta<0 || qizi[k].sta>14 || qizi[k].stb<0 || qizi[k].stb>14){
+		qizi[k].style.display="none";}
+		}
+		
+    for(var j=0;j<qizi.length;j++){
+        qizi[j].onclick=function(){
+            if(i%2==0 && this.qiziColor == "none" && ava==0){
+                this.className +=" "+ "b";
+                i++;
+                this.qiziColor="b";
+                who.innerHTML="白方走";
+                var that=this;
+                var stra1=that.id.split("a")[1];
+				var stra=stra1.split("b")[0];
+				var strb=that.id.split("b")[1];
+				if((that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-3)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-4)+"b"+parseInt(strb)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-3)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+parseInt(strb)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+parseInt(strb)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+3)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+parseInt(strb)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+3)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+4)+"b"+parseInt(strb)).qiziColor)||(that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-3)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-4)).qiziColor)||(that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-3)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+1)).qiziColor)||(that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+1)).qiziColor)||(that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+3)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+1)).qiziColor)||(that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+3)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+4)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-3)+"b"+(parseInt(strb)-3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-4)+"b"+(parseInt(strb)-4)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-3)+"b"+(parseInt(strb)-3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)+1)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+(parseInt(strb)+2)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+3)+"b"+(parseInt(strb)+3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)+1)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+3)+"b"+(parseInt(strb)+3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+4)+"b"+(parseInt(strb)+4)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-3)+"b"+(parseInt(strb)+3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-4)+"b"+(parseInt(strb)+4)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-3)+"b"+(parseInt(strb)+3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)-1)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+(parseInt(strb)-2)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+3)+"b"+(parseInt(strb)-3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)-1)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+3)+"b"+(parseInt(strb)-3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+4)+"b"+(parseInt(strb)-4)).qiziColor))
+				{alert("黑方胜！");
+				ava++;};
+            }
+            else if(i%2==1 && this.qiziColor == "none" && ava==0){
+                this.className +=" "+ "w";
+                i++;
+                this.qiziColor="w";
+                who.innerHTML="黑方走";
+				var that=this;
+                var stra1=that.id.split("a")[1];
+				var stra=stra1.split("b")[0];
+				var strb=that.id.split("b")[1];
+				if((that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-3)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-4)+"b"+parseInt(strb)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-3)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+parseInt(strb)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+parseInt(strb)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+3)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+parseInt(strb)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+3)+"b"+parseInt(strb)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+4)+"b"+parseInt(strb)).qiziColor)||(that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-3)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-4)).qiziColor)||(that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-3)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+1)).qiziColor)||(that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+1)).qiziColor)||(that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+3)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+1)).qiziColor)||(that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+3)).qiziColor && that.qiziColor==document.getElementById("a"+parseInt(stra)+"b"+(parseInt(strb)+4)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-3)+"b"+(parseInt(strb)-3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-4)+"b"+(parseInt(strb)-4)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-3)+"b"+(parseInt(strb)-3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)+1)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+(parseInt(strb)+2)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+3)+"b"+(parseInt(strb)+3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)+1)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+3)+"b"+(parseInt(strb)+3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+4)+"b"+(parseInt(strb)+4)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-3)+"b"+(parseInt(strb)+3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-4)+"b"+(parseInt(strb)+4)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-3)+"b"+(parseInt(strb)+3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)-1)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)-2)+"b"+(parseInt(strb)+2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+(parseInt(strb)-2)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)-1)+"b"+(parseInt(strb)+1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+3)+"b"+(parseInt(strb)-3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)-1)).qiziColor)||(that.qiziColor==document.getElementById("a"+(parseInt(stra)+1)+"b"+(parseInt(strb)-1)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+2)+"b"+(parseInt(strb)-2)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+3)+"b"+(parseInt(strb)-3)).qiziColor && that.qiziColor==document.getElementById("a"+(parseInt(stra)+4)+"b"+(parseInt(strb)-4)).qiziColor))
+				{alert("白方胜！");
+				ava++;};
+                            }
+        }
+    }
+    clear.onclick=function(){
+        for(var l=0;l<qizi.length;l++){
+            qizi[l].className="qizi";
+            qizi[l].qiziColor="none";
+        }
+        who.innerHTML="黑方走";
+        i=0;
+		ava=0;
+    }
+</script>
+</body>
+</html>
