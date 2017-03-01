@@ -1,0 +1,77 @@
+#cal {
+ position:relative;
+ height:310px;
+ width:400px;
+ background:#e22;
+ overflow:hidden;
+ padding:10px;
+  margin:auto;
+  border-radius: 10px;
+}
+
+#ss {
+  position:relative;
+  height:50px;
+  width:380px;
+  background-color:#aac;
+  border:none;
+  display:inline-block;
+  margin-left:10px;
+  margin-top:10px;
+  margin-bottom:10px;
+  text-align:right;
+  line-height:50px;
+  font-size:40px;
+  overflow:hidden;
+}
+#keysnum{
+  width:300px;
+  height:340px;
+  display:inline-block;
+  overflow:hidden;
+}
+.num{
+  position:relative;
+  display:inline-block;
+  width:80px;
+  height:50px;
+  cursor:pointer;
+  background:green;
+  margin:2px;
+  border-radius:15px;
+  text-align:center;
+  line-height:50px;
+}
+#keyoth{
+  float:right;
+  display:inline-block;
+  height:220px;
+  width:118px;
+  margin-left:-36px;
+  position:relative;
+}
+.oth{
+  width:45px;
+  height:48px;
+  cursor:pointer;
+  background:green;
+  display:inline-block;
+  position:relative;
+  margin:3px;
+  border-radius:10px;
+  text-align:center;
+  line-height:40px;
+  cursor:pointer;
+}
+.equal{
+  width:103px;
+  height:48px;
+  cursor:pointer;
+  background:green;
+  display:inline-block;
+  position:relative;
+  margin:3px;
+  border-radius:10px;
+  text-align:center;
+  line-height:40px;
+}
