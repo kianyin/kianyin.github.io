@@ -1,8 +1,4 @@
-body{
-  background:url("background.png") no-repeat ;
-  background-size:100% 800px;
-  background-position:fixed;
-}
+
 #cal {
  position:absolute;
   top:50%;
@@ -88,4 +84,9 @@ body{
 }
 .equal:hover,.num:hover,.oth:hover{
   background:red;
+}
+body{
+  background:url("background.png") no-repeat;
+  background-size:100% 800px;
+  background-position:fixed;
 }
