@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 04</title>
+  </head>
+<body>
+<input id="input"> <button id="buttonleft" name="left">leftin</button> <button id="buttonright" name="right">rightin</button> <button id="buttonleftout" name="leftout">leftout</button> <button id="buttonrightout" name="rightout">rightout</button> 
+<div id="big"></div>
+</body>
+<script type="text/javascript">
+var leftin=document.getElementById("buttonleft");
+var rightin=document.getElementById("buttonright");
+var leftout=document.getElementById("buttonleftout");
+var rightout=document.getElementById("buttonrightout");
+var input=document.getElementById("input");
+var body=document.getElementsByTagName("body")[0];
+var big=document.getElementById("big");
+
+
+leftin.onclick=function(){
+if(input.value){
+var e=document.createElement("div");
+e.style.display="inline-block";
+e.style.background="red";
+e.style.margin="5px";
+e.style.padding="3px";
+e.onclick=function(){
+    this.remove();
+}
+e.innerHTML=input.value;
+input.value="";
+if(!big.childNodes[0]){
+big.appendChild(e);
+}else{
+big.insertBefore(e,big.childNodes[0]);}
+}
+}
+
+rightin.onclick=function(){
+if(input.value){
+var e=document.createElement("div");
+e.style.display="inline-block";
+e.style.background="red";
+e.style.margin="5px";
+e.style.padding="3px";
+e.innerHTML=input.value;
+    e.onclick=function(){
+        this.remove();
+    }
+input.value="";
+big.appendChild(e);
+}
+}
+
+leftout.onclick=function(){
+big.childNodes[0].remove();
+
+}
+
+rightout.onclick=function(){
+big.childNodes[big.childNodes.length-1].remove();
+}
+
+var i=0;
+var a=big.childNodes;
+for(i=0;i<big.childNodes.lengh;i++){
+console.log(big.childNodes);
+a[i].onclick=consolelogthis();
+}
+</script>
+</html>
